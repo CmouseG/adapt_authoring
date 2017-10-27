@@ -20,7 +20,6 @@ define(function(require) {
 
   // used to check what's preloaded
   var globalData = {
-    courses: false,
     extensiontypes: false,
     componenttypes: false
   };
@@ -49,9 +48,6 @@ define(function(require) {
       ensureEditorData();
       resetLoadStatus(globalData);
       // create the global collections
-      if(!Origin.editor.data.courses) {
-        Origin.editor.data.courses = createCollection(CourseModel);
-      }
       if(!Origin.editor.data.extensiontypes) {
         Origin.editor.data.extensiontypes = createCollection(ExtensionModel);
       }
